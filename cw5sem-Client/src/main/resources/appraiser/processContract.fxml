@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="580.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appraiserControllers.ProcessContract">
+   <children>
+      <GridPane layoutX="14.0" layoutY="26.0" prefHeight="459.0" prefWidth="832.0" AnchorPane.rightAnchor="14.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="616.0000549316406" minWidth="10.0" prefWidth="150.4000183105469" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="572.7999816894531" minWidth="10.0" prefWidth="572.7999816894531" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="43.99999084472656" minHeight="10.0" prefHeight="43.99999084472656" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="51.20001373291015" minHeight="10.0" prefHeight="51.20001373291015" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="41.20001220703125" minHeight="10.0" prefHeight="41.20001220703125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="48.600012207031256" minHeight="10.0" prefHeight="39.19999389648436" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="57.60001220703123" minHeight="10.0" prefHeight="43.19998779296873" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="116.79998779296875" minHeight="10.0" prefHeight="93.59998779296876" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="99.20001220703125" minHeight="10.0" prefHeight="91.20001220703125" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Объект для оценки:" />
+            <Label text="Ценовые ожидания заказчика&#10;за продажу объекта, руб.:" GridPane.rowIndex="1" />
+            <Label text="Стоимость предложенная оценщиком:" GridPane.rowIndex="2" />
+            <Label text="Стоимость оценки объекта:" GridPane.rowIndex="3" />
+            <Label text="Заказчик:" GridPane.rowIndex="4" />
+            <Label text="Оценщик:" GridPane.rowIndex="5" />
+            <Label text="Комментарий от заказчика:" GridPane.rowIndex="6" />
+            <Label text="Комментарий от оценщика:" GridPane.rowIndex="7" />
+            <Label fx:id="appraisalObjectText" text="Label" GridPane.columnIndex="1" />
+            <Label fx:id="expectedPriceText" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="consumerText" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="appraiserText" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="commentFromConsumerText" prefHeight="100.0" prefWidth="570.0" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextArea fx:id="commentFromAppraiserLine" prefHeight="79.0" prefWidth="573.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="appraiserPriceLine" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="priceForAppraisalLine" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+<!--            <Button fx:id="findStrategyButton" mnemonicParsing="false" onAction="#findStrategy" prefWidth="200.0" text="Выбрать" GridPane.columnIndex="1" GridPane.rowIndex="5" />-->
+         </children>
+      </GridPane>
+      <HBox layoutX="646.0" layoutY="540.0">
+         <children>
+            <Button fx:id="cancelButton" cancelButton="true" mnemonicParsing="false" onAction="#cancel" prefWidth="100.0" text="Отменить" />
+            <Button fx:id="saveButton" disable="true" mnemonicParsing="false" onAction="#save" prefWidth="100.0" text="Сохранить" />
+         </children>
+      </HBox>
+      <Label fx:id="errorMSG" layoutX="14.0" layoutY="497.0" prefHeight="34.0" prefWidth="832.0" textFill="RED" wrapText="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="400.0" maxWidth="420.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="420.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Authorization">
+   <children>
+      <Label layoutX="126.0" layoutY="20.0" prefHeight="38.0" prefWidth="168.0" text="Авторизация" textFill="WHITE" AnchorPane.bottomAnchor="341.6" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="126.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="77.0" prefHeight="322.0" prefWidth="420.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <ImageView fitHeight="322.0" fitWidth="420.0" opacity="0.8">
+               <image>
+                  <Image url="@../images/authorizationBg.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+            <PasswordField fx:id="passwordLine" layoutX="56.0" layoutY="83.0" prefHeight="38.0" prefWidth="318.0" promptText="Пароль">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="loginLine" layoutX="57.0" layoutY="35.0" prefHeight="38.0" prefWidth="318.0" promptText="Логин:alex@gmail.com" style="-fx-border-color: silver; -fx-border-radius: 5;">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <Button fx:id="signUpButton" layoutX="53.0" layoutY="254.0" mnemonicParsing="false" onAction="#signUp" prefHeight="31.0" prefWidth="318.0" style="-fx-background-color: #FFCE51;" text="Зарегистрироваться">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorMsgText" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="15.0" layoutY="212.0" prefHeight="18.0" prefWidth="390.0" textFill="RED" />
+            <Button fx:id="signInButton" defaultButton="true" layoutX="53.0" layoutY="147.0" mnemonicParsing="false" onAction="#signIn" prefHeight="38.0" prefWidth="318.0" text="Войти">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
